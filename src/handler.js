@@ -102,16 +102,16 @@ const editbookByIdHandler = (request, h) => {
     try{
         // tidak ada id
         if (index === -1) {
-            throw new Error ('Gagal memperbarui Buku. Id tidak ditemukan');
+            throw new Error ('Gagal memperbarui buku. Id tidak ditemukan');
           }
         // nama null
         if(!name){
-            throw new Error ('Gagal menambahkan buku. Mohon isi nama buku');
+            throw new Error ('Gagal memperbarui buku. Mohon isi nama buku');
         }
 
         // readPage > pageCount
         if(readPage > pageCount){
-            throw new Error ('Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount');
+            throw new Error ('Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount');
         }
 
         //jika valid maka sukses
